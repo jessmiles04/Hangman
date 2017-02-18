@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Psychic Game</title>
+  
+  </head>
+  <body>
+  <div class="container">
+  
+  
+    <h1>The Psychic Game </h1>
+
+    <p>I'm thinking of a letter. What is it?</p>
+
+    <p>Wins: <span id="wins"> 0</p>
+    <p>Losses: <span id="losses"> 0</p>
+    <p>Guesses Left: <span id="guesses-left"></span></p>
+    <p>Letters Guessed: <span id="letters-guessed"></span></p>
+
+  </div>
+<script type="text/javascript"> 
+
+//Variables
+var choices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", 
+"l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var lettersGuessed = [];
+var computerLetter = null;
+var wins = 0;
+var losses = 0;
+var remainingGuesses = 10;
+
+var updateRemainingGuesses = function(){
+        document.getElementById("guesses-left").innerHTML = remainingGuesses;
+    };
+
+var updateComputerLetter = function() {
+     
+     this.computerLetter = this.choices[Math.floor(Math.random() * this.choices.length)];
+   };
+
+var updateGuessesSoFar = function() {
+     
+     document.querySelector("#letters-guessed").innerHTML = lettersGuessed.join(", ");
+   };
+
+var reset = function() 
+{
+    
+     remainingGuesses = 10;
+     lettersGuessed = [];
+     updateComputerLetter();
+     updateRemainingGuesses();
+     updateGuessesSoFar();
+};
+  
+
+document.onkeyup = function(event) {
+
+  remainingGuesses--;
+
+  var choices = String.fromCharCode(event.keyCode).toLowerCase();
+
+  lettersGuessed.push(choices);
+
+  updateRemainingGuesses();
+     updateGuessesSoFar();
+
+    if (computerLetter === choices) {
+        wins++;
+        reset();
+        document.querySelector("#wins").innerHTML = wins;
+      }
+
+    if (remainingGuesses === 0) {
+      losses++;
+      document.querySelector("#losses").innerHTML = losses;
+      reset();
+      
+    };
+
+
+
+    
+
+};
+</script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{"wordlist":[
+	{
+		"word": "hobbit"
+		"clue":"shire folk" 
+	},
+	{
+		"word":"legolas"
+		"clue":"prince of the woods"
+	},
+	{	"word": "samwise"
+		"clue": "truest of the hobbits"
+	},
+	{
+			"word": "rivendell"
+			"clue": "home of the elves"
+	},
+	{	"word": "aragorn"
+		"clue": "strider"
+	},
+	{	"word": "frodo"
+		"clue": "the last ringbearer"},
+	{	"word": "evenstar"
+		"clue": "arwen"},
+	{	"word": "mordor"
+		"clue": "mount doom"}	
+	
+]}
