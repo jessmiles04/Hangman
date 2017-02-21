@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman</title>
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css", rel="stylesheet", integrity="sha384-Xqcy5ttufkC3rBa8EdiAyA1VgOGrmel2Y+wxm4K3kI3fcjTWlDWrlnxyD6hOi3PF", crossorigin="anonymous"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+	
+<body style="background-image: url('assets/images/map.jpeg');">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+         <a class="navbar-brand"><center><strong>Lord of the Rings Vocabulary</strong></center></a>
+    </div>
+    </div>
+  </div>
+</nav>
+
+
+  <div id="main-container" class="container">
+    <section class="main-section"> 
+
+          <div class="row">
+           <div class="col-md-2">
+         
+            </div>
+              <div class="col-md-8">
+                <div class="jumbotron"><center><h1>Speak Friend and Enter</h1></center>
+                  <div class="row"> 
+                   <a href="#" class="btn btn-primary btn-lg" onclick="myFunction()" id="start"><strong>Click me!</strong></a>
+                      </div><hr>
+
+                  <div class="row">
+                  <center><h1><span id="blanksAndGuesses"></span></h1></center><hr>
+                  <br>
+                   </div>
+                    <div class="row">
+                    <h3>Your guess: <span id="wrongGuesses"></span></h3>
+                    	</div>
+
+                    	<div class="row" > 
+                    	<h3> Chances remaining: <span id="remainingGuesses"> <span>0</h3>
+                      </div>
+                      	<div class="row" > 
+                      	<div class="col-md-6">
+                    	<h3> Wins: <span id="wins">0</span></h3></div> 
+
+
+                   		<div class="col-md-6"><h3>Losses:  <span id="losses">0</span></h3></div>  
+                      </div>
+
+
+                </div>
+              </div>
+              </div>
+
+    		<div class="col-md-2">
+         
+            </div>
+
+        </div>
+   </section>
+  </div>
+
+  <div class="push"></div>
+</div>
+  </div>
+
+  <footer>
+    <div class="container">
+      &copy; Copyright 2017 Jess Miles
+    </div>
+  </footer>
+    <script type="text/javascript" src="script.js">
+	</script>
+</body>
+</html>
